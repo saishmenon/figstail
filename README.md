@@ -1,40 +1,60 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+# Figstail
 
-  https://www.figma.com/plugin-docs/plugin-quickstart/
+Figstail is a comprehensive starter project for developing Figma plugins using Svelte and TailwindCSS. It provides a solid foundation and preconfigured setup to help you quickly start building powerful Figma plugins with a streamlined development experience.
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+## Features
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+-   Easy setup and installation
+-   Bundling of JS, CSS, SVG, and image assets during the build process
+-   Automatic compilation of TypeScript and app on save during development
+-   Minification of code during the build phase
+-   Preconfigured integration with Figma Plugin DS Svelte
+-   Access to a wide range of components and icons that match the Figma UI
+-   Small bundle size by including only what you import/use
 
-  https://nodejs.org/en/download/
+## Getting Started
 
-Next, install TypeScript using the command:
+1. Clone the repository and open the project:
 
-  npm install -g typescript
+```
+git clone https://github.com/saishmenon/figstail.git figma-plugin
+cd figma-plugin
+```
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+2. Install the dependencies:
 
-  npm install --save-dev @figma/plugin-typings
+```
+npm install
+```
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+3. Start the development server:
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+```
+npm run dev
+```
 
-For more information, visit https://www.typescriptlang.org/
+This will launch the development server and provide you with a local URL where you can preview your plugin during development.
 
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
+4. Build your plugin:
 
-We recommend writing TypeScript code using Visual Studio code:
+```
+npm run build
+```
 
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
+This command will generate a production-ready build of your plugin, which can then be used to publish the plugin to the Figma Community.
 
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+## Connecting your plugin to Figma
+
+After installing, open your Figma desktop app and right click on the canvas and select `Plugins > Development > Import plugin from manifest...` and find the `manifest.json` inside the project directory `figma-plugin/public/manifest.json` and select it to link it.
+
+You also can just type "New Plugin" in Figma global search `Cmd + /` or `Ctrl + /` to get there.
+
+Now edit the below line in the manifest.json file to give your plugin a new name.
+
+```
+"name": "Figstail Plugin Template",
+```
+
+## Acknowledgements
+
+-   [Figsvelte](https://github.com/thomas-lowry/figsvelte) - A boilerplate for creating Figma plugins with Svelte built by [Tom Lowry](https://github.com/thomas-lowry).

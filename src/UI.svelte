@@ -22,7 +22,7 @@
         </p>
 
         <p class="mt-6 text-xs text-gray-400 text-center">
-            Let me know what you build with this.
+            Give me a holler and share what you've built.
         </p>
     </div>
 </main>
