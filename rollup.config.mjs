@@ -21,7 +21,7 @@ export default [
         output: {
             format: "iife",
             name: "ui",
-            file: "src/build/bundle.js",
+            file: "public/build/bundle.js",
         },
         plugins: [
             svelte({
