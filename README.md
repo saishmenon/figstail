@@ -41,7 +41,7 @@ This will launch the development server and provide you with a local URL where y
 npm run build
 ```
 
-This command will generate a production-ready build of your plugin, which can then be used to publish the plugin to the Figma Community.
+This step is not necessary for running your plugin. This command will generate a production-ready build of your plugin, which can then be used to publish the plugin to the Figma Community.
 
 ## Connecting your plugin to Figma
 
